@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Callback</title>
+    <script>
+        // Extract the query parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+        const accessToken = params.get("access_token");
+        const error = params.get("error");
+
+        if (accessToken) {
+            // Store the access token in local storage or redirect to another page
+            localStorage.setItem("contentful_access_token", accessToken);
+            document.body.innerHTML = "<h1>Authentication Successful</h1><p>You can close this page.</p>";
+        } else if (error) {
+            document.body.innerHTML = "<h1>Authentication Failed</h1><p>Error: " + error + "</p>";
+        } else {
+            document.body.innerHTML = "<h1>Redirecting...</h1>";
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
