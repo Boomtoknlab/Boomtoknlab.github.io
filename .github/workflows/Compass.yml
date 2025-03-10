@@ -1,0 +1,23 @@
+name: Boomtoknlab.github.io
+id: 'ari:cloud:compass:2eefe999-d61b-469c-92ef-31fc5e9b3f13:component/ace244a1-3ae8-43fb-8c96-347d12170341/58b65263-d95f-4376-8fe6-1b70442e9165'
+description: >-
+  This repository hosts the static website for Boomtoknlab, including OAuth authentication integration with Contentful. It contains the necessary
+  redirect URI (/oauth/callback) to handle authentication responses from Contentful.
+configVersion: 1
+typeId: SERVICE
+ownerId: null
+fields:
+  tier: 4
+links:
+  - name: null
+    type: REPOSITORY
+    url: 'https://github.com/Boomtoknlab/Boomtoknlab.github.io'
+relationships: {}
+labels:
+  - 'language:html'
+  - 'source:github'
+  - synced-with-jsm
+customFields: null
+
+# Learn more about formatting compass.yml:
+# https://go.atlassian.com/compass-yml-format
